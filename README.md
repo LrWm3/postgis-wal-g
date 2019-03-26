@@ -1,9 +1,9 @@
 # Postgres WAL-G
 
-This image extends the stock [Postgres Image](https://hub.docker.com/_/postgres/)
+This image extends the stock [PostGIS Image](https://hub.docker.com/r/mdillon/postgis)
 and adds [WAL-G](https://github.com/wal-g/wal-g) support, along with some
 helpful scripts. It allows you to simply and easily create continuous 
-archives of Postgres databases in S3-compatible storage. 
+archives of PostGIS databases in S3-compatible storage. 
 
 ## Environment
 To use the image, you'll need to configure a bucket on your favorite S3-
@@ -43,6 +43,6 @@ At this point you should have high confidence that the recovery was successful.
 If you start your recovered backup, be sure to turn `archive_mode = off` to avoid
 pushing additional WAL files to S3!
 
-## Postgres Versions
-Currently I build for Postgres 9.6 and Postgres 11. Be advised that 9.6 is the
+## PostGIS Versions
+Currently I build for PostGIS 9.6 and PostGIS 11. Be advised that 9.6 is the
 earliest version that WAL-G supports. 
