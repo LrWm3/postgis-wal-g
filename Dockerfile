@@ -1,6 +1,6 @@
 ARG BASE
 
-FROM postgres:$BASE
+FROM mdillon/postgis:$BASE
 
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update  -qq && \
