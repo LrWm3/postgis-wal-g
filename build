@@ -3,7 +3,7 @@
 set -e
 
 REV=$1
-IMAGE_NAME=koehn/postgres-wal-g
+IMAGE_NAME=williammarsman/postgis-wal-g
 
 build_image() {
   BASE=$1
@@ -13,7 +13,7 @@ build_image() {
   docker push $IMAGE
 }
 
-build_image "11.1"  "$REV"
+build_image "11"
 build_image "9.6" 
 
 wait

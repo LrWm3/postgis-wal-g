@@ -16,7 +16,7 @@ to your bucket
 * `WALG_S3_PREFIX` to tell WAL-G which bucket and prefix you'd like to use
 
 ## Configuration
-In your `/varlib/postgresql/data/pgsql/postgresql.conf` file, set your [archive
+In your `/var/lib/postgresql/data/pgsql/postgresql.conf` file, set your [archive
 settings](https://www.postgresql.org/docs/9.1/continuous-archiving.html). 
 Importantly, you should set `archive_mode = on` and 
 `archive_command = 'wal-g wal-push %p'`. This will
